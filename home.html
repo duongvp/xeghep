@@ -37,6 +37,380 @@
     .menu-item span {
       font-family: "Arial", sans-serif;
     }
+
+    .list-prices {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+      gap: 30px;
+      background: #f4f4f4;
+    }
+
+    .item-prices {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: fit-content;
+      background: #fff;
+      position: relative;
+    }
+
+    .item-prices .img-items {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .item-prices .img-items:hover::before {
+      left: 100%;
+      transition: all 1s ease;
+    }
+
+    .item-prices .img-items::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      left: -75%;
+      background: -webkit-linear-gradient(
+        left,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+      );
+      transform: skewX(-25deg);
+    }
+
+    .title-prices {
+      height: 50px;
+      text-align: center;
+      line-height: 2;
+      background-color: #fd8c00;
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .description-prices {
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.5;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .info-garage {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-garage h1 {
+      margin: 14px;
+    }
+
+    .info-details {
+      margin-top: 15px;
+      width: 1170px;
+      display: flex;
+      gap: 30px;
+    }
+
+    .content-details p {
+      margin-bottom: 4px;
+      line-height: 2;
+      font-size: 14px;
+    }
+
+    .grid-img {
+      display: grid;
+      gap: 12px;
+    }
+
+    /* Hàng trên: 2 ảnh */
+    .row-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 280px);
+      gap: 12px;
+    }
+
+    /* Hàng dưới: 3 ảnh */
+    .row-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 183px);
+      gap: 12px;
+    }
+
+    /* Fix hiển thị ảnh */
+    .row-2 img {
+      width: 280px;
+      height: 178px;
+      object-fit: cover;
+    }
+
+    .row-3 img {
+      width: 183px;
+      height: 122px;
+      object-fit: cover;
+    }
+
+    .hotline-info,
+    .zalo-pickup,
+    .hotline-pickup {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .hotline-info,
+    .zalo-pickup {
+      background-color: rgb(226, 136, 50);
+      color: #fff;
+    }
+
+    .hotline-info {
+      padding: 12px 18px;
+      border-radius: 22px;
+      width: fit-content;
+    }
+
+    .zalo-pickup {
+      padding: 12px 0;
+      width: 150px;
+      text-align: center;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .zalo-pickup:hover {
+      background-color: rgb(226, 136, 80);
+      transition: all 0.3s ease;
+    }
+
+    .hotline-pickup {
+      padding: 12px 18px;
+      border-radius: 6px;
+      color: rgb(226, 136, 50);
+      border: 2px solid rgb(226, 136, 50);
+    }
+
+    .hotline-pickup:hover {
+      background-color: rgb(226, 136, 50);
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .animation-zoom {
+      animation: zoomLoop 1.5s ease-in-out infinite;
+    }
+
+    @keyframes zoomLoop {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .pickup {
+      height: 600px;
+      width: 100%;
+      background-image: url(images/td211.jpg);
+      background-size: cover;
+      background-position: center;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .pickup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .pickup-content h1 {
+      color: #f58220;
+      font-size: 36px;
+    }
+    .pickup-content h2 {
+      color: #c0c0c0;
+      font-size: 28px;
+    }
+    .pickup-content p {
+      line-height: 2;
+      color: #ffffff;
+    }
+
+    .why-choose-us {
+      background: url("images/bg-tamdao.jpg") center / cover no-repeat;
+      color: #fff;
+    }
+
+    .why-overlay {
+      background: rgba(0, 0, 0, 0.1);
+      padding: 60px 0;
+    }
+
+    .container {
+      max-width: 1170px;
+      margin: auto;
+      padding: 0 15px;
+    }
+
+    .why-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .why-subtitle {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 50px;
+    }
+
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .why-item img {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+    }
+
+    .why-item h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .why-item p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .feedback {
+      height: 600px;
+      width: 100%;
+      background-image: url(images/td211.jpg);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .feedback-content {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .feedback-content h1 {
+      color: #f58220;
+      font-size: 36px;
+    }
+    .feedback-content h2 {
+      color: #c0c0c0;
+      font-size: 28px;
+    }
+    .feedback-content p {
+      line-height: 2;
+      color: #ffffff;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .container-menu {
+        display: none;
+      }
+
+      .list-prices {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .info-garage {
+        padding: 20px 8px;
+      }
+
+      .info-details {
+        width: 100%;
+      }
+
+      .info-garage h1 {
+        font-size: 24px;
+      }
+
+      .info-details {
+        flex-direction: column;
+        align-items: center;
+      }
+      .why-title {
+        font-size: 26px;
+      }
+
+      .why-list {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-img {
+        display: none;
+      }
+
+      .pickup-content {
+        width: 90%;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .pickup-content h1 {
+        font-size: 24px;
+      }
+
+      .pickup-content h2 {
+        font-size: 16px;
+      }
+
+      .pickup-content p {
+        font-size: 14px;
+      }
+    }
   </style>
   <body>
     <div class="container-menu">
@@ -80,7 +454,307 @@
         </div>
       </div>
     </div>
-    <h1>Welcome to the Home Page</h1>
-    <p>This is the main content of the home page.</p>
+    <!-- <div class="nav-container">
+      <div class="nav">
+        <img
+          alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+          src="images/bb1.jpg"
+          style="width: 100%"
+        />
+      </div>
+    </div> -->
+    <div class="banner">
+      <img
+        alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+        src="images/bb1.jpg"
+        style="width: 100%"
+      />
+    </div>
+    <div class="list-prices">
+      <div class="item-prices">
+        <div class="img-items">
+          <img
+            alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+            src="images/bantai1.png"
+            style="
+              width: 370px;
+              height: 241px;
+              border-width: 0px;
+              border-style: solid;
+              border-color: rgb(210, 210, 210);
+            "
+          />
+        </div>
+        <div class="title-prices">
+          <p>Gửi đồ hỏa tốc chỉ 100k/ lần</p>
+        </div>
+        <div class="description-prices">
+          <p>Gửi hàng cồng kềnh -</p>
+          <p>Hàng to hoả tốc giá siêu rẻ chỉ từ #100k</p>
+        </div>
+      </div>
+      <div class="item-prices">
+        <div class="img-items">
+          <img
+            alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+            src="images/a1.png"
+            style="
+              width: 370px;
+              height: 241px;
+              border-width: 0px;
+              border-style: solid;
+              border-color: rgb(210, 210, 210);
+            "
+          />
+        </div>
+        <div class="title-prices">
+          <p>Xe 4 chỗ: 200k/ vé</p>
+        </div>
+        <div class="description-prices">
+          <p>BAO XE 4 CHỖ 400-500K (tùy khu vực )</p>
+        </div>
+      </div>
+      <div class="item-prices">
+        <div class="img-items">
+          <img
+            alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+            src="images/a2.png"
+            style="
+              width: 370px;
+              height: 241px;
+              border-width: 0px;
+              border-style: solid;
+              border-color: rgb(210, 210, 210);
+            "
+          />
+        </div>
+        <div class="title-prices">
+          <p>Xe 7 chỗ: 350k/ 2 người</p>
+        </div>
+        <div class="description-prices">
+          <p>BAO XE 7 CHỖ 500-600K (tùy khu vực)</p>
+        </div>
+      </div>
+    </div>
+    <div class="info-garage">
+      <h1>XE GHÉP VĨNH YÊN - HÀ NỘI</h1>
+      <img
+        alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+        src="images/line2.png"
+        style="width: 348px; height: 32px; border-width: 0px; border-style: solid"
+      />
+      <div class="info-details">
+        <div class="content-details">
+          <p>
+            <strong> Nhà xe Gia Hưng</strong> là đơn vị chuyên chạy xe tuyến đường Hà Nội  Vĩnh Yên
+            (khứ hồi) được hành khách tin tưởng lựa chọn. Chúng tôi cung cấp đủ xe ở tất cả các phân
+            khúc: Từ xe 4 chỗ đến 7 chỗ và 16 chỗ.
+          </p>
+          <p>
+            Dù chạy ở bất cứ dòng xe nào của chúng tôi, các bạn cũng sẽ luôn cảm nhận được chất
+            lượng, sự chuyên nghiệp trong phục vụ. <strong> Nhà xe Gia Hưng</strong> nhận đưa đón
+            tận nơi các điểm tại Hà Nội và thành phố Vĩnh Yên.
+          </p>
+          <p>Các dòng xe chúng tôi đang phục vụ Khách hàng đều là xe mới, an toàn và hiện đại</p>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px">
+            <img
+              alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+              src="images/cc.png"
+              style="width: 16px; height: 16px"
+            />
+            <p><strong>Xe 4 chỗ</strong> Cerato,Hyundai Elantra, Accent, Vios</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px">
+            <img
+              alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+              src="images/cc.png"
+              style="width: 16px; height: 16px"
+            />
+            <p><strong>Xe 7 chỗ:</strong> Toyota Fortuner</p>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: center">
+            <div class="hotline-info animation-zoom">
+              <span>Hotline: 0846.555.222 - 0971.326.336</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid-img">
+          <div class="row row-2">
+            <img src="images/b1.jpg" />
+            <img src="images/b2.jpeg" />
+          </div>
+
+          <div class="row row-3">
+            <img src="images/b3.jpg" />
+            <img src="images/0_moi.jpg" />
+            <img src="images/b5.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pickup">
+      <div class="pickup-content">
+        <h1>XE GHÉP ĐÓN TẠI NHÀ TRẢ TẬN NƠI VĨNH YÊN - HÀ NỘI</h1>
+        <h2>Đáp ứng mọi nhu cầu di chuyển của bạn!</h2>
+        <p>
+          Nhằm đáp ứng nhu cầu đi lại hàng ngày và Dịp Nghỉ Lễ Tết chuyến Hà Nội - Vĩnh Yên được
+          thuận tiện hơn. Nhà xe Gia Hưng cung cấp dịch vụ xe ghép 4 chỗ, 7 chỗ, 16 chỗ chạy hàng
+          ngày liên tục các khung giờ. Đón trả tận nơi trên các quận huyện Thanh Trì - Đống Đa -Hoàn
+          Kiếm -Thanh Xuân -Từ Liêm -Thăng Long -Hà Đông -Đông Anh và Sân Bay Nội bài. Với đội ngũ
+          lái xe và đa dạng xe từ 4-7 chỗ. Ghép khách trên cùng tuyến đường để giảm chi phí cho
+          khách hàng, Với đội ngũ lái xe nhiều kinh nghiệm, dàn xe đời mới đón trả khách tận nơi,
+          tài xế nhiệt tình chu đáo sẽ làm hài lòng tất cả khách hàng.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px">
+          <div class="zalo-pickup animation-zoom">
+            <span>ZALO</span>
+          </div>
+          <div class="hotline-pickup animation-zoom">
+            <span>Hotline: 0846.555.222</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info-garage">
+      <h1>XE 4 CHỖ, 7 CHỖ VĨNH YÊN - HÀ NỘI</h1>
+      <img
+        alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+        src="images/line2.png"
+        style="width: 348px; height: 32px; border-width: 0px; border-style: solid"
+      />
+      <p>
+        Chỉ từ 400k sẽ có xe 4-5-7c gia đình sạch sẽ, khử trùng hàng ngày, đón tận nhà trả tận ngõ.
+        Với đội ngũ lái xe chuyên nghiệp,phục vụ tận tình,chu đáo 24/7
+      </p>
+      <div class="list-prices" style="background-color: #fff !important">
+        <div class="item-prices">
+          <div class="img-items">
+            <img
+              alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+              src="images/bantai1.png"
+              style="
+                width: 370px;
+                height: 241px;
+                border-width: 0px;
+                border-style: solid;
+                border-color: rgb(210, 210, 210);
+              "
+            />
+          </div>
+          <div class="title-prices">
+            <p>Gửi đồ hỏa tốc chỉ 100k/ lần</p>
+          </div>
+          <div class="description-prices">
+            <p>Gửi hàng cồng kềnh -</p>
+            <p>Hàng to hoả tốc giá siêu rẻ chỉ từ #100k</p>
+          </div>
+        </div>
+        <div class="item-prices">
+          <div class="img-items">
+            <img
+              alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+              src="images/a1.png"
+              style="
+                width: 370px;
+                height: 241px;
+                border-width: 0px;
+                border-style: solid;
+                border-color: rgb(210, 210, 210);
+              "
+            />
+          </div>
+          <div class="title-prices">
+            <p>Xe 4 chỗ: 200k/ vé</p>
+          </div>
+          <div class="description-prices">
+            <p>BAO XE 4 CHỖ 400-500K (tùy khu vực )</p>
+          </div>
+        </div>
+        <div class="item-prices">
+          <div class="img-items">
+            <img
+              alt="Tổng đài xe ghép chuyên tuyến Vĩnh Yên- Hà Nội giá rẻ, đưa đón tại nhà"
+              src="images/a2.png"
+              style="
+                width: 370px;
+                height: 241px;
+                border-width: 0px;
+                border-style: solid;
+                border-color: rgb(210, 210, 210);
+              "
+            />
+          </div>
+          <div class="title-prices">
+            <p>Xe 7 chỗ: 350k/ 2 người</p>
+          </div>
+          <div class="description-prices">
+            <p>BAO XE 7 CHỖ 500-600K (tùy khu vực)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-choose-us">
+      <div class="why-overlay">
+        <div class="container">
+          <h2 class="why-title">TẠI SAO NÊN CHỌN XE GHÉP VĨNH YÊN - HÀ NỘI?</h2>
+          <p class="why-subtitle">Thoải mái như xe nhà - Giá rẻ như xe khách</p>
+
+          <div class="why-list">
+            <div class="why-item">
+              <img src="images/diamond111.png" alt="" />
+              <div>
+                <h3>Giá cạnh tranh</h3>
+                <p>Giá cả cạnh tranh nhất thị trường</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <img src="images/support.png" alt="" />
+              <div>
+                <h3>Thân thiện</h3>
+                <p>Lái xe thân thiện, không đón khách dọc đường</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <img src="images/shuttle.png" alt="" />
+              <div>
+                <h3>Đưa đón tận nơi</h3>
+                <p>Dịch vụ đưa đón tận nơi nội thành Hà Nội và Vĩnh Yên</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <img src="images/shield.png" alt="" />
+              <div>
+                <h3>An toàn</h3>
+                <p>Lái xe đảm bảo an toàn suốt hành trình</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <img src="images/certificate.png" alt="" />
+              <div>
+                <h3>Chuyên nghiệp</h3>
+                <p>Lái xe thông thạo, phục vụ chuyên nghiệp</p>
+              </div>
+            </div>
+
+            <div class="why-item">
+              <img src="images/solidarity.png" alt="" />
+              <div>
+                <h3>Chu đáo</h3>
+                <p>Hỗ trợ đặt phòng nghỉ, ăn uống nếu có yêu cầu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="feedback">
+      <div class="feedback-content">
+        <h1>Phản hồi của khách hàng</h1>
+      </div>
+    </div>
   </body>
 </html>
