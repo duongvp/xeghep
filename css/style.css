@@ -435,8 +435,8 @@ body {
 }
 
 .dot {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: rgba(65, 54, 54, 0.4);
   cursor: pointer;
@@ -451,7 +451,7 @@ body {
 }
 
 .dot:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(70, 70, 70, 0.8);
   transform: scale(1.1);
 }
 
@@ -932,7 +932,7 @@ footer {
   }
 
   .feedback {
-    padding: 40px 15px;
+    padding: 35px 0;
   }
 
   .feedback-content h1 {
@@ -949,7 +949,7 @@ footer {
   }
 
   .award-card {
-    height: 280px;
+    height: fit-content;
     padding: 25px 20px;
   }
 
@@ -1140,6 +1140,10 @@ footer {
 
   .zalo-button {
     display: none;
+  }
+
+  .main-nav {
+    gap: 0;
   }
 }
 

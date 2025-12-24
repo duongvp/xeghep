@@ -22,7 +22,9 @@ function createAutoCarousel() {
 
     function updateTrackPosition() {
         if (!items[0]) return;
-        const itemWidth = items[0].offsetWidth + 30;
+        const trackWidth = window.innerWidth <= 768 ? 15 : 30;
+
+        const itemWidth = items[0].offsetWidth + trackWidth;
         track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     }
 
